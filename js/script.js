@@ -55,13 +55,13 @@ function jugarNivel(minFactor, maxFactor) {
         
         if (respuestaUsuario === resultadoCorrecto) {
             vidas ++
-            alert("¡Respuesta correcta! Avanzas al siguiente intento.");
+            alert("¡Respuesta correcta!");
         }
         else {
             vidas--
             alert("Era: " + resultadoCorrecto + "¡Respuesta incorrecta! Pierdes una vida. Te quedan " + vidas + " vidas.")
         }
-        if (vidas >= 5) {
+        if (vidas >= 6) {
             alert ("Felicitaciones, cumpliste con el objetivo")
             break
         }
