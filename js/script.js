@@ -1,8 +1,9 @@
 // Simulador de juego de Multiplicaciones
-
+// Variables
 let nombre
 let vidas = 3
 
+//  Acá se hace el llamado del saludo con el prompt del ingreso del nombre definido
 function saludo(nombreUsuario) {
     alert("¡Bienvenido " + nombreUsuario + "\nHoy probaremos tus conocimientos en diferentes niveles de complejidad multiplicando.\nCominenzas con " + vidas + " vidas y pierdas una por cada error")
 }
@@ -11,14 +12,17 @@ function ingresoNombre() {
     nombre = prompt("¡Empecemos!\n¿Cómo te llamas?")
 }
 
+// Función matematica para generar valores aleatorios en un rago definido de min y max
 function Aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+// Ingreso de un número que va a ser el multiplicado
 function ingresoNumero() {
     return Number(prompt("Elige un número a tu antojo"))
 }
 
+// Ingreso de número de nivel de dificultad y casos de switch para jugar una función
 function ingresoNivel() {
     let nivel = Number(prompt("Elige un nivel de dificultad desde el 1 al 5"))
 
@@ -44,6 +48,7 @@ function ingresoNivel() {
     }
 }
 
+// Función de juego con un ciclo de generar un aleatorio y diferentes preguntas por alert
 function jugarNivel(minFactor, maxFactor) {
     let numeroElegido = ingresoNumero()
     let resultadoCorrecto
@@ -71,6 +76,7 @@ function jugarNivel(minFactor, maxFactor) {
     }
 }
 
+// Ejecución de las 3 funciones necesarias
 ingresoNombre()
 saludo(nombre)
 ingresoNivel()
